@@ -58,6 +58,6 @@ class Base:
 
 
     def get_toast(self, toast):
-        toast_xpath = (By.XPATH, "//*contains[@text, '{}']".format(toast))
+        toast_xpath = (By.XPATH, "//*[contains(@text, '{}')]".format(toast))
         data = self.get_element(toast_xpath, timeout=5, once=0.5).text
         return data
